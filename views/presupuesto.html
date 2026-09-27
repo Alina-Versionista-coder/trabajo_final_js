@@ -8,6 +8,7 @@
 </head>
 <body>
     <!-- HEADER -->
+     <!-- Menú de navegación: class="active" marca la página en la que esta usuario -->
     <nav class="navigacion_principal">
         <div class="logo">Palma Digital Studio</div>
         <ul>
@@ -19,15 +20,19 @@
     </nav>
     <!-- MAIN -->
     <main>
+        <!--contenedor principal-->
         <div class="contenedor">
+        <!--sección del formulario para pedir presupuesto.-->
         <section id="presupuesto">
             <h1 class="cabecera">Solicita presupuesto personalizado</h1>
+            <!--formulario tiene dos partes: datos de contacto y datos del presupuesto-->
             <form id="form-presupuesto">
                 <!--<fieldset> agrupa varios campos de un formulario que están relacionados entre sí,
-                y <legend> le pone un título a ese grupo.-->
+                y en <legend> esta el  título de ese grupo.-->
                 <fieldset>
                     <legend>Datos de contacto</legend>
-                    <!--pedimos datos -->
+                    <!--pedimos datos personales y luego validaremos con JS-->
+                    <!-- En los span vacíos el JS avisa con los mensajes de error si el dato no es válido.-->
                     <label for="nombre">Tu nombre</label>
                     <input type="text" id="nombre" maxlength="15" minlength="2" required>
                     <span class="error" id="error-nombre"></span>
@@ -49,23 +54,16 @@
                 <fieldset>
                     <legend>Datos para presupuesto</legend>
                     <label for="producto">Elige un producto</label>
-                    <!-- 'id' para identificarlo (luego en JS), 'name' si el form se envía tradicionalmente -->
+                    <!--cada opción guarda su precio en data-precio, y el JS lo lee para calcular el total.-->
                     <select id="producto" name="producto">
-                        <!-- 
-                        Truco para guardar un precio (o cualquier dato extra) en cada opción:
-                        se usa un atributo que empiece por "data-", el nombre de después es libre
-                        -->
                         <option value="basico" data-precio="50">Basico - 50€</option>
                         <option value="estandar" data-precio="100">Estandar - 100€</option>
                         <option value="premium" data-precio="200">Premium - 200€</option>
                         <option value="profesional" data-precio="300">Profesional - 300€</option>
-                </select>
+                    </select>
                     <!-- 
-                CHECKBOX: a diferencia del select (eliges 1), aquí el usuario 
-                puede marcar VARIAS casillas a la vez
-                -->
-
-                <!-- Cada extra es un checkbox independiente, con su propia label -->
+                CHECKBOX: servicios opcionales, y que cada uno sumara su data-precio al total.
+                y  cada extra es un checkbox independiente, con su propia label -->
                 <label>
                     <input type="checkbox" id="extraColor" name="extras" value="color" data-precio="10">
                     Añade color personalizado (+10€)
@@ -82,20 +80,19 @@
                 </label>
 
                 <!-- PLAZOS
-                INPUT NUMÉRICO: para que el usuario escriba una cantidad
+                según los meses se aplica un descuento del 5% o del 10%.
+                Uso input numerico para que usuario pueda escribir dentro un numero de meses.
                 -->
 
                 <label for="plazo">Plazo en meses</label>
                 <input type="number" id="plazo" name="plazo" min="1" max="24">
+                <p class="aviso-descuento">Descuento: 5% a partir de 6 meses · 10% a partir de 12 meses</p>
 
-                <!-- 
-                    OUTPUT: pensado justo para esto — mostrar el RESULTADO de un cálculo 
-                    hecho a partir de otros campos de un formulario, sin que el usuario lo edite
-                    -->
+                <!-- OUTPUT: Esta etiqueta uso para calcular TOTAL -->
                 <label for="total">Total</label>
                 <output id="total" name="total">0€</output>
 
-                
+                <!-- REQUIRED: Es obligatorio y sin marcar esta casilla, formulario no se enviara -->
                 <label>
                     <input type="checkbox" id="aceptoCondiciones" name="condiciones" required>
                     He leido y acepto la politica de privacidad
@@ -104,7 +101,7 @@
                 <!-- Botón para enviar el formulario -->
                  <button type="submit">Enviar formulario</button>
 
-                 <!-- Opcional: botón para resetear -->
+                 <!-- Boton para limpiar los campos -->
                   <button type="reset">Resetear formulario</button>
                 </fieldset>
             </form>
@@ -113,9 +110,11 @@
     </main>
     <!-- FOOTER -->
     <footer>
+        <!-- Enlaces a redes sociales con iconos SVG de Font Awesome.
+        El aria-label indica a los lectores de pantalla que red es cada icono -->
         <div class="redes_sociales">
-            <!--LINKEDN-->
-            <a href="https://linkedn/es-ficcio" aria-label="Linkedn">
+            <!--LINKEDIN-->
+            <a href="https://linkedin.com/ficcio" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6
@@ -126,7 +125,7 @@
             </a>
 
             <!--FACEBOOK-->
-            <a href="https://facebook.com/es-ficcio" aria-label="Facebook">
+            <a href="https://facebook.com/ficcio" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
 
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -137,7 +136,7 @@
             </a>
 
             <!--INSTAGRAM-->
-            <a href="https://instagram.com/es-ficcio" aria-label="Instagram">
+            <a href="https://instagram.com/ficcio" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 
@@ -153,6 +152,7 @@
             </a>
 
         </div>
+        <!-- Copyright y dirección de la empresa -->
         <div class="aviso-legal-direccion">
         <p> Palma Studio© 2026. Todos los derechos reservados.</p>
         <p>
@@ -162,6 +162,7 @@
 
 
     </footer>
+    <!-- JS hace la validación y el cálculo -->
     <script src="../js/presupuesto.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@
 </head>
 <body>
     <!-- HEADER -->
+     <!-- Menú de navegación: class="active" marca la página en la que esta usuario -->
     <nav class="navigacion_principal">
         <div class="logo">Palma Digital Studio</div>
         <ul>
@@ -19,9 +20,12 @@
     </nav>
     <!-- MAIN -->
     <main>
+        <!--contenedor que envuelve todo el contenido principal-->
         <div class="container-main">
+            <!--titulo principal de la pagina y de la web en general-->
              <h1>Palma Digital Studio</h1>
             <!--SECCION: TARJETAS-->
+            <!--agrupa las secciones "quiénes somos", "servicios" y "testimonios"-->
             <div id="tarjetas">
             
                 <!-- SECCIÓN 1: Quiénes somos -->
@@ -32,7 +36,7 @@
                 </section>
 
                 <!--SECCION 2: Servicios-->
-                
+                <!--Muestra servicios los servicios principales enlas tarjetas-->
                  <section id="servicios">
                     <h2>Nuestros servicios</h2>
 
@@ -55,26 +59,47 @@
                 </section>
 
                 <!-- SECCIÓN 3: Testimonios-->
+                 <!--esta seccion muestra testimonios de los clientes, uso "blockquote" para comentarios de los demas-->
                 <section id="testimonios">
                     <h2>Lo que dicen nuestros clientes</h2>
-                    <blockquote>"Triplicamos nuestras visitas web en tres meses. Un equipo muy profesional." — Cliente del sector hostelero</blockquote>
+                    <blockquote>
+                        <p class="estrellas">★★★★★</p>
+                        <p>"Desde que trabajamos con Palma Digital Studio, nuestras reservas online se han triplicado. Por fin nuestras redes trabajan para nosotros."</p>
+                        <p class="autor">— Marta R., restaurante en Palma</p>
+                    </blockquote>
+
+                    <blockquote>
+                        <p class="estrellas">★★★★★</p>
+                        <p>"Nos dieron una marca con personalidad y una web que vende. Ahora los clientes nos encuentran solos."</p>
+                        <p class="autor">— Joan P., tienda de decoración</p>
+                    </blockquote>
+
+                    <blockquote>
+                        <p class="estrellas">★★★★★</p>
+                        <p>"Pasamos de no aparecer en Google a estar en la primera página en tres meses. Una inversión perfecta."</p>
+                        <p class="autor">— Laura G., clínica de fisioterapia</p>
+                    </blockquote>
                 </section>
             </div>
 
-            <!-- SECCIÓN 2: Noticias-->
+            <!-- SECCIÓN 4: Noticias-->
              <h2 class="titulo-noticias">Ultimas noticias</h2>
-    <div id="noticias">
+
+        <!-- Este div está vacío porque se rellena con noticias.js,
+        que carga las noticias desde data/noticias.json con fetch -->
+        <div id="noticias">
          
-            
-            
-    </div>
+        </div>
         </div>
     </main>
+    
     <!-- FOOTER -->
     <footer>
+        <!-- Enlaces a redes sociales con iconos SVG de Font Awesome.
+        El aria-label indica a los lectores de pantalla que red es cada icono -->
         <div class="redes_sociales">
-            <!--LINKEDN-->
-            <a href="https://linkedn/es-ficcio" aria-label="Linkedn">
+            <!--LINKEDIN-->
+            <a href="https://linkedin.com/ficcio" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6
@@ -85,7 +110,7 @@
             </a>
 
             <!--FACEBOOK-->
-            <a href="https://facebook.com/es-ficcio" aria-label="Facebook">
+            <a href="https://facebook.com/ficcio" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
 
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -96,7 +121,7 @@
             </a>
 
             <!--INSTAGRAM-->
-            <a href="https://instagram.com/es-ficcio" aria-label="Instagram">
+            <a href="https://instagram.com/ficcio" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 
@@ -112,6 +137,7 @@
             </a>
 
         </div>
+        <!-- Copyright y dirección de la empresa -->
         <div class="aviso-legal-direccion">
         <p> Palma Studio© 2026. Todos los derechos reservados.</p>
         <p>
@@ -121,6 +147,8 @@
 
 
     </footer>
+    <!--carga el script de las noticias al final del body,
+    de esta manera el HTML ya estara cargado cuando se ejecute.-->
     <script src="js/noticias.js"></script>
 </body>
 </html>

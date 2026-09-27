@@ -12,6 +12,7 @@
 </head>
 <body>
     <!-- HEADER -->
+     <!-- Menú de navegación: class="active" marca la página en la que esta usuario -->
     <nav class="navigacion_principal">
         <div class="logo">Palma Digital Studio</div>
         <ul>
@@ -23,14 +24,16 @@
     </nav>
       <!-- MAIN -->
     <main>
+        <!--Contenedor principal-->
         <div class="contenedor">
+            <!--sección de contacto, con el mapa y los datos de la empresa-->
             <section id="contacto">
                 <h1 class="cabecera">Contacta con nosotros</h1>
 
-                <!-- Aquí irá el mapa -->
+                <!--el div está vacío y el contacto.js dibuja dentro el mapa con Leaflet y la ruta hasta la oficina.-->
                 <div id="map"></div>
 
-                <!-- Aquí irán los datos de contacto -->
+                <!-- Aqui estan los datos de contacto: dirección, teléfono y email de la empresa. -->
                 <div class="datos-contacto">
                     <p>Dirección: Carrer Joan Vicence i Rossello 15, 07013, Palma de Mallorca, Islas Baleares, España</p>
                     <p>Teléfono: (+34)611111111</p>
@@ -41,9 +44,11 @@
     </main>
 <!-- FOOTER -->
     <footer>
+        <!-- Enlaces a redes sociales con iconos SVG de Font Awesome.
+        El aria-label indica a los lectores de pantalla que red es cada icono -->
         <div class="redes_sociales">
-            <!--LINKEDN-->
-            <a href="https://linkedn/es-ficcio" aria-label="Linkedn">
+            <!--LINKEDIN-->
+            <a href="https://linkedn.com/ficcio" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6
@@ -54,7 +59,7 @@
             </a>
 
             <!--FACEBOOK-->
-            <a href="https://facebook.com/es-ficcio" aria-label="Facebook">
+            <a href="https://facebook.com/ficcio" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
 
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -65,7 +70,7 @@
             </a>
 
             <!--INSTAGRAM-->
-            <a href="https://instagram.com/es-ficcio" aria-label="Instagram">
+            <a href="https://instagram.com/ficcio" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 
@@ -81,6 +86,7 @@
             </a>
 
         </div>
+        <!-- Copyright y dirección de la empresa -->
         <div class="aviso-legal-direccion">
         <p> Palma Studio© 2026. Todos los derechos reservados.</p>
         <p>

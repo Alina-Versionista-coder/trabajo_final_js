@@ -8,6 +8,7 @@
 </head>
 <body>
     <!-- HEADER -->
+     <!-- Menú de navegación: class="active" marca la página en la que esta usuario -->
     <nav class="navigacion_principal">
         <div class="logo">Palma Digital Studio</div>
         <ul>
@@ -19,17 +20,18 @@
     </nav>
     <!-- MAIN -->
     <main>
-       
+       <!--sección de la galería con los 4 packs de marketing-->
        <section id="galeria">
         <h1 class="cabecera">Galeria</h1>
+            <!--la cuadrícula con las miniaturas de los packs, y que al hacer clic en una  imagen se abrira en grande.-->
             <div id="grid-galeria">
-                <img src="../images/pexels-andrii-yakovlev-2153785017-32934099.jpg" alt="caballo" class="galeria-thumb">
-                <img src="../images/pexels-andrii-yakovlev-2153785017-32922468.jpg" alt="caballo" class="galeria-thumb">
-                <img src="../images/pexels-andrii-yakovlev-2153785017-32922206.jpg" alt="caballo" class="galeria-thumb">
-                <img src="../images/pexels-andrii-yakovlev-2153785017-32907278.jpg" alt="caballo" class="galeria-thumb">
-
-            </div>
+                <img src="../images/pack-basico.jpg" alt="Pack Básico de marketing digital, 50€" class="galeria-thumb">
+                <img src="../images/pack-estandar.jpg" alt="Pack Estándar de marketing digital, 100€" class="galeria-thumb">
+                <img src="../images/pack-premium.jpg" alt="Pack Premium de marketing digital, 200€" class="galeria-thumb">
+                <img src="../images/pack-profesional.jpg" alt="Pack Profesional de marketing digital, 300€" class="galeria-thumb">
+                </div>
        </section>
+       <!-- modal- es la ventana emergente y al principio esta oculta, pero galeria.js la muestra con la imagen en la que se ha hecho clic -->
        <div id="modal-galeria" class= "modal-oculto">
             <span id="cerrar-modal">&times;</span>
             <img id="modal-imagen" src="../images/pexels-andrii-yakovlev-2153785017-32934099.jpg" alt="Imagen ampliada">
@@ -37,9 +39,11 @@
     </main>
    <!-- FOOTER -->
     <footer>
+        <!-- Enlaces a redes sociales con iconos SVG de Font Awesome.
+        El aria-label indica a los lectores de pantalla que red es cada icono -->
         <div class="redes_sociales">
-            <!--LINKEDN-->
-            <a href="https://linkedn/es-ficcio" aria-label="Linkedn">
+            <!--LINKEDIN-->
+            <a href="https://linkedin.com/ficcio" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6
@@ -50,7 +54,7 @@
             </a>
 
             <!--FACEBOOK-->
-            <a href="https://facebook.com/es-ficcio" aria-label="Facebook">
+            <a href="https://facebook.com/ficcio" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
 
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -61,7 +65,7 @@
             </a>
 
             <!--INSTAGRAM-->
-            <a href="https://instagram.com/es-ficcio" aria-label="Instagram">
+            <a href="https://instagram.com/ficcio" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <!--!Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 
@@ -77,6 +81,7 @@
             </a>
 
         </div>
+        <!-- Copyright y dirección de la empresa -->
         <div class="aviso-legal-direccion">
         <p> Palma Studio© 2026. Todos los derechos reservados.</p>
         <p>
@@ -86,6 +91,7 @@
 
 
     </footer>
+    <!--primero se carga jQuery porque galeria.js lo necesita para poder funcionar.-->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/galeria.js"></script>
 </body>
